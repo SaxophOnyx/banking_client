@@ -1,9 +1,9 @@
-import 'package:banking_client/app_di_setup.dart';
-import 'package:banking_client/bank_client_app.dart';
+import 'package:core/core.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-import 'core/core.dart';
+import 'app_di_setup.dart';
+import 'bank_client_app.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

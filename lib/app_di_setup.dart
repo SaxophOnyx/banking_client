@@ -1,8 +1,8 @@
-import 'package:banking_client/core/core.dart';
-import 'package:banking_client/data/data.dart';
-import 'package:banking_client/domain/domain.dart';
-import 'package:banking_client/navigation/navigation.dart';
+import 'package:core/core.dart';
+import 'package:data/data.dart';
+import 'package:domain/domain.dart';
 import 'package:flutter/widgets.dart';
+import 'package:navigation/navigation.dart';
 
 void setupAppDI() {
   const String baseUrl = 'http://192.168.160.177:8080';

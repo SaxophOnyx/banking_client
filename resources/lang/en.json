@@ -62,5 +62,8 @@
       "requiredField": "This is a required field",
       "serverError": "Something went wrong during request processing"
     }
+  },
+  "deposit": {
+    "title": "Deposit"
   }
 }

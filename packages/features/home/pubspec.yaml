@@ -1,0 +1,32 @@
+name: home
+description: A starting point for Dart libraries or applications.
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ^3.1.3
+  flutter: ^3.13.6
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  auto_route: ^7.8.4
+
+  core:
+    path: ../../core
+  core_ui:
+    path: ../../core_ui
+  navigation:
+    path: ../../navigation
+  clients:
+    path: ../clients
+  edit_client:
+    path: ../edit_client
+  deposit:
+    path: ../deposit
+
+dev_dependencies:
+  lints: ^2.0.0
+  auto_route_generator: ^7.3.2
+  build_runner: ^2.4.8

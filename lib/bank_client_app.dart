@@ -1,8 +1,8 @@
-import 'package:banking_client/core/core.dart';
-import 'package:banking_client/core_ui/core_ui.dart';
-import 'package:banking_client/navigation/navigation.dart';
+import 'package:core/core.dart';
+import 'package:core_ui/core_ui.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:navigation/navigation.dart';
 
 class BankClientApp extends StatelessWidget {
   const BankClientApp({super.key});
