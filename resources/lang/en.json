@@ -1,0 +1,66 @@
+{
+  "common": {
+    "yes": "Yes",
+    "no": "No",
+    "submit": "Submit",
+    "empty": "-",
+    "gender": {
+      "_male": "Male",
+      "_female": "Female",
+      "_other": "Other"
+    },
+    "familyStatus": {
+      "single": "Single",
+      "married": "Married"
+    },
+    "disability": {
+      "firstGroup": "First Group",
+      "secondGroup": "Second Group",
+      "thirdGroup": "Third Group"
+    }
+  },
+  "users": {
+    "title": "Users",
+    "usersList": "Users",
+    "userDetails": "User details",
+    "noUsersFound": "No users found",
+    "noSelectedUser": "No selected user",
+    "buttons": {
+      "createUser": "Create user",
+      "editUser": "Edit user"
+    },
+    "labels": {
+      "id": "ID",
+      "firstName": "First Name",
+      "middleName": "Middle Name",
+      "lastName": "Last Name",
+      "gender": "Sex",
+      "birthAddress": "Birth Address",
+      "currentCity": "Current City",
+      "currentAddress": "Current Address",
+      "cityOfResidence": "City of Residence",
+      "residenceAddress": "Residence Address",
+      "citizenship": "Citizenship",
+      "passwordAll": "Password",
+      "passwordSeries": "Password Series",
+      "passwordNumber": "Password Number",
+      "idNumber": "ID Number",
+      "issuing": "Issuing",
+      "issuingDate": "Issuing Date",
+      "homeNumber": "Home Number",
+      "mobileNumber": "Mobile Number",
+      "email": "Email",
+      "position": "Position",
+      "placeOfWork": "Place of Work",
+      "monthlyIncome": "Monthly Income",
+      "retiree": "Retiree",
+      "familyStatus": "Family Status",
+      "disability": "Disability",
+      "conscription": "Conscription"
+    },
+    "errors": {
+      "requiredField": "This is a required field",
+      "serverError": "Something went wrong during request processing"
+    }
+  }
+}
