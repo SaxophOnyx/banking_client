@@ -17,7 +17,7 @@ import 'package:banking_client/features/edit_client/src/screen/edit_client_scree
 import 'package:banking_client/features/home/src/home_screen.dart' as _i3;
 import 'package:flutter/material.dart' as _i6;
 
-abstract class $HomeModule extends _i4.AutoRouterModule {
+abstract class $EditClientModule extends _i4.AutoRouterModule {
   @override
   final Map<String, _i4.PageFactory> pagesMap = {
     ClientsRoute.name: (routeData) {

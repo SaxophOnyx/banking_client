@@ -15,12 +15,18 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
-    EditUserRoute.name: (routeData) {
-      final args = routeData.argsAs<EditUserRouteArgs>(
-          orElse: () => const EditUserRouteArgs());
-      return AutoRoutePage<User>(
+    ClientsRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: EditUserScreen(
+        child: const ClientsScreen(),
+      );
+    },
+    EditClientRoute.name: (routeData) {
+      final args = routeData.argsAs<EditClientRouteArgs>(
+          orElse: () => const EditClientRouteArgs());
+      return AutoRoutePage<Client>(
+        routeData: routeData,
+        child: EditClientScreen(
           key: args.key,
           initialData: args.initialData,
         ),
@@ -32,53 +38,61 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const HomeScreen(),
       );
     },
-    UsersRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const UsersScreen(),
-      );
-    },
     ...HomeModule().pagesMap,
-    ...UsersModule().pagesMap,
-    ...EditUserModule().pagesMap,
+    ...ClientsModule().pagesMap,
+    ...EditClientModule().pagesMap,
   };
 }
 
 /// generated route for
-/// [EditUserScreen]
-class EditUserRoute extends PageRouteInfo<EditUserRouteArgs> {
-  EditUserRoute({
+/// [ClientsScreen]
+class ClientsRoute extends PageRouteInfo<void> {
+  const ClientsRoute({List<PageRouteInfo>? children})
+      : super(
+          ClientsRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ClientsRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [EditClientScreen]
+class EditClientRoute extends PageRouteInfo<EditClientRouteArgs> {
+  EditClientRoute({
     Key? key,
-    User? initialData,
+    Client? initialData,
     List<PageRouteInfo>? children,
   }) : super(
-          EditUserRoute.name,
-          args: EditUserRouteArgs(
+          EditClientRoute.name,
+          args: EditClientRouteArgs(
             key: key,
             initialData: initialData,
           ),
           initialChildren: children,
         );
 
-  static const String name = 'EditUserRoute';
+  static const String name = 'EditClientRoute';
 
-  static const PageInfo<EditUserRouteArgs> page =
-      PageInfo<EditUserRouteArgs>(name);
+  static const PageInfo<EditClientRouteArgs> page =
+      PageInfo<EditClientRouteArgs>(name);
 }
 
-class EditUserRouteArgs {
-  const EditUserRouteArgs({
+class EditClientRouteArgs {
+  const EditClientRouteArgs({
     this.key,
     this.initialData,
   });
 
   final Key? key;
 
-  final User? initialData;
+  final Client? initialData;
 
   @override
   String toString() {
-    return 'EditUserRouteArgs{key: $key, initialData: $initialData}';
+    return 'EditClientRouteArgs{key: $key, initialData: $initialData}';
   }
 }
 
@@ -92,20 +106,6 @@ class HomeRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'HomeRoute';
-
-  static const PageInfo<void> page = PageInfo<void>(name);
-}
-
-/// generated route for
-/// [UsersScreen]
-class UsersRoute extends PageRouteInfo<void> {
-  const UsersRoute({List<PageRouteInfo>? children})
-      : super(
-          UsersRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'UsersRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

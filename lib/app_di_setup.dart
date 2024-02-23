@@ -12,31 +12,31 @@ void setupAppDI() {
     AppRouter(navigatorKey: rootNavigatorKey),
   );
 
-  appDi.registerSingleton<UserProvider>(
-    const RemoveUserProvider(baseUrl: baseUrl),
+  appDi.registerSingleton<ClientProvider>(
+    const RemoveClientProvider(baseUrl: baseUrl),
   );
 
-  appDi.registerSingleton<UserRepository>(
-    UserRepositoryImpl(
-      userProvider: appDi.get<UserProvider>(),
+  appDi.registerSingleton<ClientRepository>(
+    ClientRepositoryImpl(
+      clientProvider: appDi.get<ClientProvider>(),
     ),
   );
 
-  appDi.registerSingleton<GetUsersUseCase>(
-    GetUsersUseCase(
-      userRepository: appDi.get<UserRepository>(),
+  appDi.registerSingleton<GetClientsUseCase>(
+    GetClientsUseCase(
+      clientRepository: appDi.get<ClientRepository>(),
     ),
   );
 
-  appDi.registerSingleton<CreateUserUseCase>(
-    CreateUserUseCase(
-      userRepository: appDi.get<UserRepository>(),
+  appDi.registerSingleton<CreateClientUseCase>(
+    CreateClientUseCase(
+      clientRepository: appDi.get<ClientRepository>(),
     ),
   );
 
-  appDi.registerSingleton<UpdateUserUseCase>(
-    UpdateUserUseCase(
-      userRepository: appDi.get<UserRepository>(),
+  appDi.registerSingleton<UpdateClientUseCase>(
+    UpdateClientUseCase(
+      clientRepository: appDi.get<ClientRepository>(),
     ),
   );
 }

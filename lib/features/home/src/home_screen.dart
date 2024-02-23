@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
 
     return AutoTabsRouter(
       routes: const <PageRouteInfo>[
-        UsersRoute(),
+        ClientsRoute(),
       ],
       builder: (BuildContext context, Widget? child) {
         final TabsRouter tabsRouter = AutoTabsRouter.of(context);
@@ -22,7 +22,7 @@ class HomeScreen extends StatelessWidget {
           appBar: AppNavigationBar(
             index: tabsRouter.activeIndex,
             items: <String>[
-              LocaleKeys.users_title.translate(),
+              LocaleKeys.clients_title.translate(),
             ],
             onItemPressed: (int index) => tabsRouter.setActiveIndex(index),
           ),

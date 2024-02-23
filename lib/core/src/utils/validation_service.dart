@@ -5,7 +5,7 @@ abstract class ValidationService {
   static final RegExp _emailRegExp = RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
 
   static String? notEmpty(String? value) {
-    return value == null || value.isEmpty ? LocaleKeys.users_errors_requiredField.translate() : null;
+    return value == null || value.isEmpty ? LocaleKeys.clients_errors_requiredField.translate() : null;
   }
 
   static String? validateEmail(String? value) {
@@ -21,22 +21,22 @@ abstract class ValidationService {
   }
 
   static String? notEmptyInt(int? value) {
-    return value == null ? LocaleKeys.users_errors_requiredField.translate() : null;
+    return value == null ? LocaleKeys.clients_errors_requiredField.translate() : null;
   }
 
   static String? notEmptyBool(bool? value) {
-    return value == null ? LocaleKeys.users_errors_requiredField.translate() : null;
+    return value == null ? LocaleKeys.clients_errors_requiredField.translate() : null;
   }
 
   static String? notEmptyFamilyStatus(FamilyStatus? value) {
-    return value == null ? LocaleKeys.users_errors_requiredField.translate() : null;
+    return value == null ? LocaleKeys.clients_errors_requiredField.translate() : null;
   }
 
   static String? notEmptyDateTime(DateTime? value) {
-    return value == null ? LocaleKeys.users_errors_requiredField.translate() : null;
+    return value == null ? LocaleKeys.clients_errors_requiredField.translate() : null;
   }
 
   static String? notEmptyGender(Gender? value) {
-    return value == null ? LocaleKeys.users_errors_requiredField.translate() : null;
+    return value == null ? LocaleKeys.clients_errors_requiredField.translate() : null;
   }
 }

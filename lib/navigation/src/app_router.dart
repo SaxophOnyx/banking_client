@@ -1,8 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:banking_client/domain/domain.dart';
-import 'package:banking_client/features/edit_user/edit_user.dart';
+import 'package:banking_client/features/clients/clients.dart';
+import 'package:banking_client/features/edit_client/edit_client.dart';
 import 'package:banking_client/features/home/home.dart';
-import 'package:banking_client/features/users/users.dart';
 import 'package:flutter/foundation.dart';
 
 import 'route_builder.dart';
@@ -11,8 +11,8 @@ part 'app_router.gr.dart';
 
 @AutoRouterConfig(modules: <Type>[
   HomeModule,
-  UsersModule,
-  EditUserModule,
+  ClientsModule,
+  EditClientModule,
 ])
 class AppRouter extends _$AppRouter {
   AppRouter({super.navigatorKey});
@@ -25,12 +25,12 @@ class AppRouter extends _$AppRouter {
           children: <AutoRoute>[
             AutoRoute(
               initial: true,
-              page: UsersRoute.page,
+              page: ClientsRoute.page,
             ),
           ],
         ),
         CustomRoute(
-          page: EditUserRoute.page,
+          page: EditClientRoute.page,
           customRouteBuilder: RouteBuilder.dismissibleDialog,
         ),
       ];

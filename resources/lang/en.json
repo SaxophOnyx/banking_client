@@ -19,15 +19,15 @@
       "thirdGroup": "Third Group"
     }
   },
-  "users": {
-    "title": "Users",
-    "usersList": "Users",
-    "userDetails": "User details",
-    "noUsersFound": "No users found",
-    "noSelectedUser": "No selected user",
+  "clients": {
+    "title": "Clients",
+    "clientsList": "Clients",
+    "clientDetails": "Client details",
+    "noClientsFound": "No clients found",
+    "noSelectedClient": "No selected client",
     "buttons": {
-      "createUser": "Create user",
-      "editUser": "Edit user"
+      "createClient": "Create client",
+      "editClient": "Edit client"
     },
     "labels": {
       "id": "ID",
