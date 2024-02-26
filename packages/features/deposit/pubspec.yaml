@@ -21,10 +21,8 @@ dependencies:
     path: ../../domain
   navigation:
     path: ../../navigation
-  clients:
-    path: ../clients
-  edit_client:
-    path: ../edit_client
+  deposit_agreement:
+    path: ../deposit_agreement
 
 dev_dependencies:
   lints: ^2.0.0

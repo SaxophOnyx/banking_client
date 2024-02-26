@@ -1,14 +1,14 @@
-import 'package:domain/domain.dart';
+import '../../../data.dart';
 
 abstract class ClientProvider {
-  Future<List<int>> queryClientIDs();
+  Future<List<String>> queryClientIDs();
 
-  Future<Client> queryClientById(int id);
+  Future<ClientEntity> queryClientById(String id);
 
-  Future<Client> createClient(ClientDTO dto);
+  Future<ClientEntity> createClient(ClientDTOEntity dto);
 
-  Future<Client> updateClient({
-    required int id,
-    required ClientDTO data,
+  Future<ClientEntity> updateClient({
+    required String id,
+    required ClientDTOEntity data,
   });
 }

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class DelayedTableTextField extends StatefulWidget {
-  final String value;
+  final String? value;
   final String error;
   final void Function(String value) onChanged;
   final List<TextInputFormatter>? formatters;
@@ -52,7 +52,7 @@ class _DelayedTableTextFieldState extends State<DelayedTableTextField> {
     super.didUpdateWidget(old);
 
     if (widget.value != controller.text) {
-      controller.text = widget.value;
+      controller.text = widget.value ?? '';
     }
   }
 

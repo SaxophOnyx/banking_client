@@ -1,12 +1,14 @@
-import 'package:domain/domain.dart';
+import '../../domain.dart';
 
 abstract class ClientRepository {
+  Stream<ItemNotification<Client>> get clientStream;
+
   Future<List<Client>> queryClients();
 
   Future<Client> createClient(ClientDTO payload);
 
   Future<Client> updateClient({
-    required int id,
+    required String id,
     required ClientDTO data,
   });
 }

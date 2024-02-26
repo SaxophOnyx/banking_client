@@ -18,7 +18,7 @@ abstract class  LocaleKeys {
   static const common_disability = 'common.disability';
   static const common = 'common';
   static const clients_title = 'clients.title';
-  static const clients_clientsList = 'clients.clientsList';
+  static const clients_clientList = 'clients.clientList';
   static const clients_clientDetails = 'clients.clientDetails';
   static const clients_noClientsFound = 'clients.noClientsFound';
   static const clients_noSelectedClient = 'clients.noSelectedClient';
@@ -58,6 +58,37 @@ abstract class  LocaleKeys {
   static const clients_errors = 'clients.errors';
   static const clients = 'clients';
   static const deposit_title = 'deposit.title';
+  static const deposit_depositList = 'deposit.depositList';
+  static const deposit_depositDetails = 'deposit.depositDetails';
+  static const deposit_noClientSelected = 'deposit.noClientSelected';
+  static const deposit_noDepositsFound = 'deposit.noDepositsFound';
+  static const deposit_noDepositSelected = 'deposit.noDepositSelected';
+  static const deposit_newDeposit = 'deposit.newDeposit';
+  static const deposit_closeBankDay = 'deposit.closeBankDay';
+  static const deposit_labels_id = 'deposit.labels.id';
+  static const deposit_labels_clientId = 'deposit.labels.clientId';
+  static const deposit_labels_type = 'deposit.labels.type';
+  static const deposit_labels_agreementNumber = 'deposit.labels.agreementNumber';
+  static const deposit_labels_begin = 'deposit.labels.begin';
+  static const deposit_labels_end = 'deposit.labels.end';
+  static const deposit_labels_agreementBegin = 'deposit.labels.agreementBegin';
+  static const deposit_labels_agreementEnd = 'deposit.labels.agreementEnd';
+  static const deposit_labels_amount = 'deposit.labels.amount';
+  static const deposit_labels_interest = 'deposit.labels.interest';
+  static const deposit_labels_accounts = 'deposit.labels.accounts';
+  static const deposit_labels = 'deposit.labels';
+  static const deposit_account_labels_id = 'deposit.account.labels.id';
+  static const deposit_account_labels_depositId = 'deposit.account.labels.depositId';
+  static const deposit_account_labels_number = 'deposit.account.labels.number';
+  static const deposit_account_labels_activity = 'deposit.account.labels.activity';
+  static const deposit_account_labels_debit = 'deposit.account.labels.debit';
+  static const deposit_account_labels_credit = 'deposit.account.labels.credit';
+  static const deposit_account_labels_balance = 'deposit.account.labels.balance';
+  static const deposit_account_labels_name = 'deposit.account.labels.name';
+  static const deposit_account_labels = 'deposit.account.labels';
+  static const deposit_account = 'deposit.account';
+  static const deposit_errors_agreementsDatesMismatchError = 'deposit.errors.agreementsDatesMismatchError';
+  static const deposit_errors = 'deposit.errors';
   static const deposit = 'deposit';
 
 }

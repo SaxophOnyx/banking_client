@@ -1,15 +1,9 @@
-import 'package:domain/src/models/disability.dart';
-import 'package:json_annotation/json_annotation.dart';
-
-import '../converters/date_time_converter.dart';
+import 'disability.dart';
 import 'family_status.dart';
 import 'gender.dart';
 
-part 'client.g.dart';
-
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class Client {
-  final int id;
+  final String id;
 
   final String firstName;
   final String middleName;
@@ -27,7 +21,6 @@ class Client {
   final String passportNumber;
   final String idNumber;
   final String issuing;
-  @DateTimeConverter()
   final DateTime issuingDate;
 
   final String? homeNumber;
@@ -71,8 +64,4 @@ class Client {
     required this.disability,
     required this.conscription,
   });
-
-  factory Client.fromJson(Map<String, dynamic> json) => _$ClientFromJson(json);
-
-  Map<String, dynamic> toJson() => _$ClientToJson(this);
 }

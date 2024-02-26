@@ -65,8 +65,8 @@ class UpdateContacts extends EditClientEvent {
 }
 
 class UpdateEmployment extends EditClientEvent {
-  final String? position;
-  final String? placeOfWork;
+  final NullOrString? position;
+  final NullOrString? placeOfWork;
   final NullOrInt? monthlyIncome;
   final bool? retiree;
 

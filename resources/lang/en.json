@@ -21,7 +21,7 @@
   },
   "clients": {
     "title": "Clients",
-    "clientsList": "Clients",
+    "clientList": "Clients",
     "clientDetails": "Client details",
     "noClientsFound": "No clients found",
     "noSelectedClient": "No selected client",
@@ -64,6 +64,41 @@
     }
   },
   "deposit": {
-    "title": "Deposit"
+    "title": "Deposits",
+    "depositList": "Deposits",
+    "depositDetails": "Deposit details",
+    "noClientSelected": "No client selected",
+    "noDepositsFound": "This client has no deposits",
+    "noDepositSelected": "No deposit selected",
+    "newDeposit": "New Deposit",
+    "closeBankDay": "Close Bank Day",
+    "labels": {
+      "id": "ID",
+      "clientId": "Client ID",
+      "type": "Type",
+      "agreementNumber": "Agreement number",
+      "begin": "Begin",
+      "end": "End",
+      "agreementBegin": "Agreement begin",
+      "agreementEnd": "Agreement end",
+      "amount": "Amount",
+      "interest": "Interest",
+      "accounts": "Accounts"
+    },
+    "account": {
+      "labels": {
+        "id": "ID",
+        "depositId": "Deposit ID",
+        "number": "Number",
+        "activity": "Activity",
+        "debit": "Debit",
+        "credit": "Credit",
+        "balance": "Balance",
+        "name": "Name"
+      }
+    },
+    "errors": {
+      "agreementsDatesMismatchError": "End date must be after begin date"
+    }
   }
 }

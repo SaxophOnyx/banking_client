@@ -14,7 +14,7 @@ class TableDropDown<T> extends StatelessWidget {
   const TableDropDown({
     super.key,
     required this.values,
-    this.value,
+    required this.value,
     required this.stringifier,
     required this.onChanged,
     this.error = '',

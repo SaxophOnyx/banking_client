@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:data/data.dart';
-import 'package:domain/domain.dart';
 import 'package:http/http.dart' as http;
 
 class RemoveClientProvider implements ClientProvider {
@@ -12,7 +11,7 @@ class RemoveClientProvider implements ClientProvider {
   }) : _baseUrl = baseUrl;
 
   @override
-  Future<Client> queryClientById(int id) async {
+  Future<ClientEntity> queryClientById(String id) async {
     final String rawUrl = '$_baseUrl/api/client/$id';
     final Uri url = Uri.parse(rawUrl);
 
@@ -20,24 +19,24 @@ class RemoveClientProvider implements ClientProvider {
 
     final String responseJson = response.body;
     final Map<String, dynamic> responseRaw = jsonDecode(responseJson);
-    final Client updatedUser = Client.fromJson(responseRaw['client']);
+    final ClientEntity updatedUser = ClientEntity.fromJson(responseRaw['client']);
 
     return updatedUser;
   }
 
   @override
-  Future<List<int>> queryClientIDs() async {
+  Future<List<String>> queryClientIDs() async {
     final String rawUrl = '$_baseUrl/api/client';
     final Uri url = Uri.parse(rawUrl);
 
     final http.Response response = await http.get(url);
     final List<dynamic> ids = jsonDecode(response.body);
 
-    return ids.cast<int>();
+    return ids.cast<String>();
   }
 
   @override
-  Future<Client> createClient(ClientDTO dto) async {
+  Future<ClientEntity> createClient(ClientDTOEntity dto) async {
     final String rawUrl = '$_baseUrl/api/client';
     final Uri url = Uri.parse(rawUrl);
 
@@ -52,15 +51,15 @@ class RemoveClientProvider implements ClientProvider {
     final String responseJson = response.body;
     final Map<String, dynamic> responseRaw = jsonDecode(responseJson);
     final Map<String, dynamic> clientJson = responseRaw['client'];
-    final Client updatedClient = Client.fromJson(clientJson);
+    final ClientEntity updatedClient = ClientEntity.fromJson(clientJson);
 
     return updatedClient;
   }
 
   @override
-  Future<Client> updateClient({
-    required int id,
-    required ClientDTO data,
+  Future<ClientEntity> updateClient({
+    required String id,
+    required ClientDTOEntity data,
   }) async {
     final String rawUrl = '$_baseUrl/api/client/$id';
     final Uri url = Uri.parse(rawUrl);
@@ -76,7 +75,7 @@ class RemoveClientProvider implements ClientProvider {
     final String responseJson = response.body;
     final Map<String, dynamic> responseRaw = jsonDecode(responseJson);
     final Map<String, dynamic> clientJson = responseRaw['client'];
-    final Client updatedClient = Client.fromJson(clientJson);
+    final ClientEntity updatedClient = ClientEntity.fromJson(clientJson);
 
     return updatedClient;
   }

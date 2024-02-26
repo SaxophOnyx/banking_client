@@ -1,11 +1,5 @@
-import 'package:domain/domain.dart';
-import 'package:json_annotation/json_annotation.dart';
+import '../../domain.dart';
 
-import '../converters/date_time_converter.dart';
-
-part 'client_dto.g.dart';
-
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class ClientDTO {
   final String firstName;
   final String middleName;
@@ -23,7 +17,6 @@ class ClientDTO {
   final String passportNumber;
   final String idNumber;
   final String issuing;
-  @DateTimeConverter()
   final DateTime issuingDate;
 
   final String? homeNumber;
@@ -36,7 +29,7 @@ class ClientDTO {
   final bool retiree;
 
   final FamilyStatus familyStatus;
-  final Disability? disability;
+  final Disability disability;
   final bool conscription;
 
   const ClientDTO({
@@ -96,8 +89,4 @@ class ClientDTO {
       conscription: user.conscription,
     );
   }
-
-  factory ClientDTO.fromJson(Map<String, dynamic> json) => _$ClientDTOFromJson(json);
-
-  Map<String, dynamic> toJson() => _$ClientDTOToJson(this);
 }

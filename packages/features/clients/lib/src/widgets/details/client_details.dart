@@ -3,7 +3,6 @@ import 'package:core_ui/core_ui.dart';
 import 'package:domain/domain.dart';
 import 'package:flutter/material.dart';
 
-import '../shared/decorated_container.dart';
 import 'client_table.dart';
 
 class ClientDetails extends StatelessWidget {
@@ -16,19 +15,13 @@ class ClientDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final AppColors colors = context.appColors;
     final Client? maybeUser = client;
 
     return DecoratedContainer(
       label: LocaleKeys.clients_clientDetails.translate(),
       child: maybeUser == null
-          ? Center(
-              child: Text(
-                LocaleKeys.clients_noSelectedClient.translate(),
-                style: AppFonts.sansSerif16Normal.copyWith(
-                  color: colors.textLight,
-                ),
-              ),
+          ? EmptyContainerContent(
+              text: LocaleKeys.clients_noSelectedClient.translate(),
             )
           : SingleChildScrollView(
               child: ClientTable(

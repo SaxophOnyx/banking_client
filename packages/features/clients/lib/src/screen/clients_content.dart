@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../bloc/clients_bloc.dart';
 import '../widgets/details/client_details.dart';
-import '../widgets/list/clients_list.dart';
+import '../widgets/list/client_list.dart';
 
 class ClientsContent extends StatelessWidget {
   const ClientsContent({super.key});

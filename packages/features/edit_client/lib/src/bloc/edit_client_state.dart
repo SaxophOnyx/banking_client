@@ -1,7 +1,7 @@
 part of 'edit_client_bloc.dart';
 
 class EditClientState {
-  final int? id;
+  final String? id;
   final String serverError;
   final PersonalSubState personal;
   final AddressSubState address;
@@ -143,8 +143,8 @@ class EditClientState {
   }
 
   EditClientState copyWithEmployment({
-    String? position,
-    String? placeOfWork,
+    NullOrString? position,
+    NullOrString? placeOfWork,
     NullOrInt? monthlyIncome,
     bool? retiree,
   }) {

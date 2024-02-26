@@ -2,11 +2,11 @@ import 'package:core_ui/core_ui.dart';
 import 'package:flutter/material.dart';
 
 class FormDialogTemplate extends StatelessWidget {
-  final List<Widget> children;
+  final Widget child;
 
   const FormDialogTemplate({
     super.key,
-    required this.children,
+    required this.child,
   });
 
   @override
@@ -24,9 +24,7 @@ class FormDialogTemplate extends StatelessWidget {
       padding: const EdgeInsets.all(AppDimens.PAGE_CONTENT_PADDING),
       child: Material(
         child: SingleChildScrollView(
-          child: Column(
-            children: children,
-          ),
+          child: child,
         ),
       ),
     );

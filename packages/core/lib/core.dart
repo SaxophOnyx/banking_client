@@ -8,6 +8,7 @@ export 'src/input_formatters/email_input_formatter.dart';
 export 'src/input_formatters/home_phone_input_formatter.dart';
 export 'src/input_formatters/mobile_phone_input_formatter.dart';
 export 'src/input_formatters/name_input_formatter.dart';
+export 'src/input_formatters/percentage_input_formatter.dart';
 export 'src/localization/app_localization.dart';
 export 'src/localization/extensions.dart';
 export 'src/localization/locale_keys.g.dart';

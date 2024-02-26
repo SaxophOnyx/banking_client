@@ -14,6 +14,11 @@ extension GenderLocaleKeyGetter on Gender {
   }
 }
 
+extension DepositTypeLocaleKeyGetter on DepositType {
+  // TODO(SaxophOnyx): Implement locale
+  String get localeKey => name;
+}
+
 extension StringConversion on String {
   String? get nullIfEmpty {
     return isEmpty ? null : this;

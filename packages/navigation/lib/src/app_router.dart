@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:clients/clients.dart';
 import 'package:deposit/deposit.dart';
+import 'package:deposit_agreement/deposit_agreement.dart';
 import 'package:edit_client/edit_client.dart';
 import 'package:home/home.dart';
 
@@ -13,6 +14,7 @@ part 'app_router.gr.dart';
   ClientsModule,
   EditClientModule,
   DepositModule,
+  DepositAgreementModule,
 ])
 class AppRouter extends _$AppRouter {
   AppRouter({super.navigatorKey});
@@ -34,6 +36,10 @@ class AppRouter extends _$AppRouter {
         ),
         CustomRoute(
           page: EditClientRoute.page,
+          customRouteBuilder: RouteBuilder.dismissibleDialog,
+        ),
+        CustomRoute(
+          page: DepositAgreementRoute.page,
           customRouteBuilder: RouteBuilder.dismissibleDialog,
         ),
       ];

@@ -27,6 +27,8 @@ dependencies:
     path: ../features/edit_client
   deposit:
     path: ../features/deposit
+  deposit_agreement:
+    path: ../features/deposit_agreement
 
 dev_dependencies:
   auto_route_generator: ^7.3.2

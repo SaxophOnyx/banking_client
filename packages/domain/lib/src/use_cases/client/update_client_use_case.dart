@@ -1,6 +1,6 @@
 import 'package:domain/domain.dart';
 
-typedef UpdateClientPayload = ({int id, ClientDTO data});
+typedef UpdateClientPayload = ({String id, ClientDTO data});
 
 class UpdateClientUseCase extends FutureUseCase<UpdateClientPayload, void> {
   final ClientRepository _clientRepository;

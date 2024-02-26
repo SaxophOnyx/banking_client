@@ -3,9 +3,6 @@ import 'package:core_ui/core_ui.dart';
 import 'package:domain/domain.dart';
 import 'package:flutter/material.dart';
 
-import 'key_table_cell.dart';
-import 'value_table_cell.dart';
-
 class ClientTable extends StatelessWidget {
   final Client client;
 
@@ -16,24 +13,7 @@ class ClientTable extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final AppColors colors = context.appColors;
-
-    return Table(
-      defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-      border: TableBorder(
-        verticalInside: BorderSide(
-          width: AppDimens.PAGE_CONTENT_BORDER_THICKNESS,
-          color: colors.pageBorder,
-        ),
-        horizontalInside: BorderSide(
-          width: AppDimens.PAGE_CONTENT_BORDER_THICKNESS,
-          color: colors.pageBorder,
-        ),
-        bottom: BorderSide(
-          width: AppDimens.PAGE_CONTENT_BORDER_THICKNESS,
-          color: colors.pageBorder,
-        ),
-      ),
+    return DisplayTableBase(
       children: <TableRow>[
         ..._personalInfoRows(),
         ..._addressRows(),
@@ -49,26 +29,26 @@ class ClientTable extends StatelessWidget {
     return <TableRow>[
       TableRow(
         children: <Widget>[
-          KeyTableCell(value: LocaleKeys.clients_labels_id.translate()),
-          ValueTableCell(value: client.id.toString()),
+          DisplayKeyTableCell(value: LocaleKeys.clients_labels_id.translate()),
+          DisplayValueTableCell(value: client.id.toString()),
         ],
       ),
       TableRow(
         children: <Widget>[
-          KeyTableCell(value: LocaleKeys.clients_labels_firstName.translate()),
-          ValueTableCell(value: client.firstName),
+          DisplayKeyTableCell(value: LocaleKeys.clients_labels_firstName.translate()),
+          DisplayValueTableCell(value: client.firstName),
         ],
       ),
       TableRow(
         children: <Widget>[
-          KeyTableCell(value: LocaleKeys.clients_labels_middleName.translate()),
-          ValueTableCell(value: client.middleName),
+          DisplayKeyTableCell(value: LocaleKeys.clients_labels_middleName.translate()),
+          DisplayValueTableCell(value: client.middleName),
         ],
       ),
       TableRow(
         children: <Widget>[
-          KeyTableCell(value: LocaleKeys.clients_labels_lastName.translate()),
-          ValueTableCell(value: client.lastName),
+          DisplayKeyTableCell(value: LocaleKeys.clients_labels_lastName.translate()),
+          DisplayValueTableCell(value: client.lastName),
         ],
       ),
     ];
@@ -78,38 +58,38 @@ class ClientTable extends StatelessWidget {
     return <TableRow>[
       TableRow(
         children: <Widget>[
-          KeyTableCell(value: LocaleKeys.clients_labels_birthAddress.translate()),
-          ValueTableCell(value: client.birthAddress),
+          DisplayKeyTableCell(value: LocaleKeys.clients_labels_birthAddress.translate()),
+          DisplayValueTableCell(value: client.birthAddress),
         ],
       ),
       TableRow(
         children: <Widget>[
-          KeyTableCell(value: LocaleKeys.clients_labels_currentCity.translate()),
-          ValueTableCell(value: client.currentCity),
+          DisplayKeyTableCell(value: LocaleKeys.clients_labels_currentCity.translate()),
+          DisplayValueTableCell(value: client.currentCity),
         ],
       ),
       TableRow(
         children: <Widget>[
-          KeyTableCell(value: LocaleKeys.clients_labels_currentAddress.translate()),
-          ValueTableCell(value: client.currentAddress),
+          DisplayKeyTableCell(value: LocaleKeys.clients_labels_currentAddress.translate()),
+          DisplayValueTableCell(value: client.currentAddress),
         ],
       ),
       TableRow(
         children: <Widget>[
-          KeyTableCell(value: LocaleKeys.clients_labels_cityOfResidence.translate()),
-          ValueTableCell(value: client.cityOfResidence),
+          DisplayKeyTableCell(value: LocaleKeys.clients_labels_cityOfResidence.translate()),
+          DisplayValueTableCell(value: client.cityOfResidence),
         ],
       ),
       TableRow(
         children: <Widget>[
-          KeyTableCell(value: LocaleKeys.clients_labels_residenceAddress.translate()),
-          ValueTableCell(value: client.residenceAddress),
+          DisplayKeyTableCell(value: LocaleKeys.clients_labels_residenceAddress.translate()),
+          DisplayValueTableCell(value: client.residenceAddress),
         ],
       ),
       TableRow(
         children: <Widget>[
-          KeyTableCell(value: LocaleKeys.clients_labels_citizenship.translate()),
-          ValueTableCell(value: client.citizenship),
+          DisplayKeyTableCell(value: LocaleKeys.clients_labels_citizenship.translate()),
+          DisplayValueTableCell(value: client.citizenship),
         ],
       ),
     ];
@@ -119,32 +99,32 @@ class ClientTable extends StatelessWidget {
     return <TableRow>[
       TableRow(
         children: <Widget>[
-          KeyTableCell(value: LocaleKeys.clients_labels_passwordSeries.translate()),
-          ValueTableCell(value: client.passportSeries),
+          DisplayKeyTableCell(value: LocaleKeys.clients_labels_passwordSeries.translate()),
+          DisplayValueTableCell(value: client.passportSeries),
         ],
       ),
       TableRow(
         children: <Widget>[
-          KeyTableCell(value: LocaleKeys.clients_labels_passwordNumber.translate()),
-          ValueTableCell(value: client.passportNumber),
+          DisplayKeyTableCell(value: LocaleKeys.clients_labels_passwordNumber.translate()),
+          DisplayValueTableCell(value: client.passportNumber),
         ],
       ),
       TableRow(
         children: <Widget>[
-          KeyTableCell(value: LocaleKeys.clients_labels_idNumber.translate()),
-          ValueTableCell(value: client.idNumber),
+          DisplayKeyTableCell(value: LocaleKeys.clients_labels_idNumber.translate()),
+          DisplayValueTableCell(value: client.idNumber),
         ],
       ),
       TableRow(
         children: <Widget>[
-          KeyTableCell(value: LocaleKeys.clients_labels_issuing.translate()),
-          ValueTableCell(value: client.issuing),
+          DisplayKeyTableCell(value: LocaleKeys.clients_labels_issuing.translate()),
+          DisplayValueTableCell(value: client.issuing),
         ],
       ),
       TableRow(
         children: <Widget>[
-          KeyTableCell(value: '${LocaleKeys.clients_labels_issuingDate.translate()} ()'),
-          ValueTableCell(value: DateFormatter.format(client.issuingDate)),
+          DisplayKeyTableCell(value: '${LocaleKeys.clients_labels_issuingDate.translate()} ()'),
+          DisplayValueTableCell(value: DateFormatter.format(client.issuingDate)),
         ],
       ),
     ];
@@ -154,20 +134,20 @@ class ClientTable extends StatelessWidget {
     return <TableRow>[
       TableRow(
         children: <Widget>[
-          KeyTableCell(value: LocaleKeys.clients_labels_homeNumber.translate()),
-          ValueTableCell(value: client.homeNumber),
+          DisplayKeyTableCell(value: LocaleKeys.clients_labels_homeNumber.translate()),
+          DisplayValueTableCell(value: client.homeNumber),
         ],
       ),
       TableRow(
         children: <Widget>[
-          KeyTableCell(value: LocaleKeys.clients_labels_mobileNumber.translate()),
-          ValueTableCell(value: client.mobileNumber),
+          DisplayKeyTableCell(value: LocaleKeys.clients_labels_mobileNumber.translate()),
+          DisplayValueTableCell(value: client.mobileNumber),
         ],
       ),
       TableRow(
         children: <Widget>[
-          KeyTableCell(value: LocaleKeys.clients_labels_email.translate()),
-          ValueTableCell(value: client.email),
+          DisplayKeyTableCell(value: LocaleKeys.clients_labels_email.translate()),
+          DisplayValueTableCell(value: client.email),
         ],
       ),
     ];
@@ -177,26 +157,26 @@ class ClientTable extends StatelessWidget {
     return <TableRow>[
       TableRow(
         children: <Widget>[
-          KeyTableCell(value: LocaleKeys.clients_labels_position.translate()),
-          ValueTableCell(value: client.position),
+          DisplayKeyTableCell(value: LocaleKeys.clients_labels_position.translate()),
+          DisplayValueTableCell(value: client.position),
         ],
       ),
       TableRow(
         children: <Widget>[
-          KeyTableCell(value: LocaleKeys.clients_labels_placeOfWork.translate()),
-          ValueTableCell(value: client.placeOfWork),
+          DisplayKeyTableCell(value: LocaleKeys.clients_labels_placeOfWork.translate()),
+          DisplayValueTableCell(value: client.placeOfWork),
         ],
       ),
       TableRow(
         children: <Widget>[
-          KeyTableCell(value: LocaleKeys.clients_labels_monthlyIncome.translate()),
-          ValueTableCell(value: NumberFormatter.formatIncome(client.monthlyIncome)),
+          DisplayKeyTableCell(value: LocaleKeys.clients_labels_monthlyIncome.translate()),
+          DisplayValueTableCell(value: NumberFormatter.formatIncome(client.monthlyIncome)),
         ],
       ),
       TableRow(
         children: <Widget>[
-          KeyTableCell(value: LocaleKeys.clients_labels_retiree.translate()),
-          ValueTableCell(value: BooleanFormatter.formatYesNo(client.retiree)),
+          DisplayKeyTableCell(value: LocaleKeys.clients_labels_retiree.translate()),
+          DisplayValueTableCell(value: BooleanFormatter.formatYesNo(client.retiree)),
         ],
       ),
     ];
@@ -206,20 +186,20 @@ class ClientTable extends StatelessWidget {
     return <TableRow>[
       TableRow(
         children: <Widget>[
-          KeyTableCell(value: LocaleKeys.clients_labels_familyStatus.translate()),
-          ValueTableCell(value: client.familyStatus.name),
+          DisplayKeyTableCell(value: LocaleKeys.clients_labels_familyStatus.translate()),
+          DisplayValueTableCell(value: client.familyStatus.name),
         ],
       ),
       TableRow(
         children: <Widget>[
-          KeyTableCell(value: LocaleKeys.clients_labels_disability.translate()),
-          ValueTableCell(value: client.disability.name),
+          DisplayKeyTableCell(value: LocaleKeys.clients_labels_disability.translate()),
+          DisplayValueTableCell(value: client.disability.name),
         ],
       ),
       TableRow(
         children: <Widget>[
-          KeyTableCell(value: LocaleKeys.clients_labels_conscription.translate()),
-          ValueTableCell(value: BooleanFormatter.formatYesNo(client.conscription)),
+          DisplayKeyTableCell(value: LocaleKeys.clients_labels_conscription.translate()),
+          DisplayValueTableCell(value: BooleanFormatter.formatYesNo(client.conscription)),
         ],
       ),
     ];

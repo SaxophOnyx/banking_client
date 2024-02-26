@@ -19,5 +19,6 @@ abstract class _$AppRouter extends RootStackRouter {
     ...ClientsModule().pagesMap,
     ...EditClientModule().pagesMap,
     ...DepositModule().pagesMap,
+    ...DepositAgreementModule().pagesMap,
   };
 }

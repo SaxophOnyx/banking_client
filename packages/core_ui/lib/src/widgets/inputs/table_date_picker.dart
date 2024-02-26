@@ -10,7 +10,7 @@ class TableDatePicker extends StatelessWidget {
 
   const TableDatePicker({
     super.key,
-    this.value,
+    required this.value,
     this.error = '',
     required this.onChange,
   });

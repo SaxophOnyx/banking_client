@@ -144,8 +144,6 @@ class EditClientBloc extends Bloc<EditClientEvent, EditClientState> {
 
     // Employment
     final EmploymentSubState employment = state.employment;
-    final String? positionError = ValidationService.notEmpty(employment.position);
-    final String? placeOfWorkError = ValidationService.notEmpty(employment.placeOfWork);
     final String? monthlyIncomeError = ValidationService.notEmptyInt(employment.monthlyIncome);
     final String? retireeError = ValidationService.notEmptyBool(employment.retiree);
 
@@ -171,8 +169,6 @@ class EditClientBloc extends Bloc<EditClientEvent, EditClientState> {
       issuingError,
       issuingDateError,
       idNumberError,
-      positionError,
-      placeOfWorkError,
       monthlyIncomeError,
       retireeError,
       familyStatusError,
@@ -196,8 +192,6 @@ class EditClientBloc extends Bloc<EditClientEvent, EditClientState> {
       idNumberError: idNumberError,
       issuingError: issuingError,
       issuingDateError: issuingDateError,
-      positionError: positionError,
-      placeOfWorkError: placeOfWorkError,
       monthlyIncomeError: monthlyIncomeError,
       retireeError: retireeError,
       familyStatusError: familyStatusError,
@@ -223,8 +217,8 @@ class EditClientBloc extends Bloc<EditClientEvent, EditClientState> {
         homeNumber: contacts.homeNumber.nullIfEmpty,
         mobileNumber: contacts.mobileNumber.nullIfEmpty,
         email: contacts.email.nullIfEmpty,
-        position: employment.position.nullIfEmpty,
-        placeOfWork: employment.placeOfWork.nullIfEmpty,
+        position: employment.position,
+        placeOfWork: employment.placeOfWork,
         monthlyIncome: employment.monthlyIncome!,
         retiree: employment.retiree!,
         familyStatus: misc.familyStatus!,
@@ -232,7 +226,7 @@ class EditClientBloc extends Bloc<EditClientEvent, EditClientState> {
         conscription: misc.conscription,
       );
 
-      final int? id = state.id;
+      final String? id = state.id;
 
       try {
         final Client client = id != null

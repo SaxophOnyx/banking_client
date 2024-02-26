@@ -11,3 +11,4 @@ class NullOr<T> {
 typedef NullOrString = NullOr<String>;
 typedef NullOrInt = NullOr<int>;
 typedef NullOrBool = NullOr<bool>;
+typedef NullOrBigInt = NullOr<BigInt>;

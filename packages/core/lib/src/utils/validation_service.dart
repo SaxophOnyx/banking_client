@@ -24,6 +24,10 @@ abstract class ValidationService {
     return value == null ? LocaleKeys.clients_errors_requiredField.translate() : null;
   }
 
+  static String? notEmptyBigInt(BigInt? value) {
+    return value == null ? LocaleKeys.clients_errors_requiredField.translate() : null;
+  }
+
   static String? notEmptyBool(bool? value) {
     return value == null ? LocaleKeys.clients_errors_requiredField.translate() : null;
   }
@@ -37,6 +41,10 @@ abstract class ValidationService {
   }
 
   static String? notEmptyGender(Gender? value) {
+    return value == null ? LocaleKeys.clients_errors_requiredField.translate() : null;
+  }
+
+  static String? notEmptyDepositType(DepositType? value) {
     return value == null ? LocaleKeys.clients_errors_requiredField.translate() : null;
   }
 }

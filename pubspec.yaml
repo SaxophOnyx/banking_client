@@ -16,6 +16,8 @@ dependencies:
     path: ./packages/core
   data:
     path: ./packages/data
+  domain:
+    path: ./packages/domain
   navigation:
     path: ./packages/navigation
 

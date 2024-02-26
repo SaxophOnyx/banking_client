@@ -2,8 +2,8 @@ import 'package:core/core.dart';
 import 'package:domain/domain.dart';
 
 class EmploymentSubState {
-  final String position;
-  final String placeOfWork;
+  final String? position;
+  final String? placeOfWork;
   final int? monthlyIncome;
   final bool? retiree;
 
@@ -44,8 +44,8 @@ class EmploymentSubState {
         retireeError = '';
 
   EmploymentSubState copyWith({
-    String? position,
-    String? placeOfWork,
+    NullOrString? position,
+    NullOrString? placeOfWork,
     NullOrInt? monthlyIncome,
     bool? retiree,
     String? positionError,
@@ -54,9 +54,9 @@ class EmploymentSubState {
     String? retireeError,
   }) {
     return EmploymentSubState(
-      position: position ?? this.position,
+      position: position != null ? position.value : this.position,
       positionError: positionError ?? this.positionError,
-      placeOfWork: placeOfWork ?? this.placeOfWork,
+      placeOfWork: placeOfWork != null ? placeOfWork.value : this.placeOfWork,
       placeOfWorkError: placeOfWorkError ?? this.placeOfWorkError,
       monthlyIncome: monthlyIncome != null ? monthlyIncome.value : this.monthlyIncome,
       monthlyIncomeError: monthlyIncomeError ?? this.monthlyIncomeError,
